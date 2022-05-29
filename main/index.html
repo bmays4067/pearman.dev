@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pearman.dev</title>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="https://kit.fontawesome.com/eaac2e4e41.js" crossorigin="anonymous"></script>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+            body {
+                margin: 0%;
+            }
+            section {
+                position: relative;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .pearmandev {
+                font-family: 'Ubuntu', sans-serif;
+                color: white;
+                text-shadow: 1px 1px 3px black;
+                z-index: 1;
+                font-size: 4em;
+                text-align: center;
+                font-weight: 500;
+                margin: 0%;
+                margin-bottom: 5px;
+            }
+
+            .title {
+                font-family: 'Ubuntu', sans-serif;
+                color: white;
+                text-shadow: 1px 1px 3px black;
+                z-index: 1;
+                font-size: 3em;
+                text-align: center;
+                font-weight: 400;
+            }
+
+            p {
+                font-family: 'Ubuntu', sans-serif;
+                color: white;
+                text-shadow: 1px 1px 3px black;
+                z-index: 2;
+                font-size: 1.5em;
+                text-align: center;
+                font-weight: 400;
+            }
+
+            .icons {
+                padding: 10px;
+                font-size: 30px;
+                width: 50px;
+                height: 30px;
+                border-radius: 20%;
+                text-align: bottom;
+                text-decoration: none;
+                margin: 5px 2px;
+                display: inline-block;
+                text-align: center;
+            }
+
+            .icons:hover {
+                opacity: 0.7;
+            }
+
+            .fa-facebook {
+                background: #3B5998;
+                color: white;
+            }
+
+            .fa-linkedin {
+                background: #0e76a8;
+                color: white;
+            }
+
+            .fa-discord {
+                background: #7289DA;
+                color: white;
+            }
+
+            .fa-github {
+                background: #171515;
+                color: white;
+            }
+
+            .fa-paper-plane {
+                background: #241C15;
+                color: white;
+            }
+			
+			.fa-docker {
+				background: #0db7ed;
+				color: white;
+			}
+        </style>
+    </head>
+    <body>
+        <section>
+            <div class="bg" style="background-color: #044A81; "></div>
+            <div>
+                <h1 class="pearmandev">pearman.dev</h1>
+                <img src="resource/koko.jpeg" style="display:block; margin-left:auto; margin-right:auto; border-radius: 100%; align-items: center;" width="200" height="200">
+                <p style="margin-top: 5px;">William Pearman (aka Bill Mays)</p>
+                <p><b>Computer Science with Cyber Security</b> undergraduate at the <b>University of Southampton</b>
+                    <br><b>Vice President</b> of the <a href="https://sucss.org/about" style="color:white">Southampton University Cyber Security Society</a> <i>(2022-2023)</i></p>   
+                <div style="text-align: center;">
+                    <a href="#" class="icons fa-brands fa-facebook"></a>
+                    <a href="#" class="icons fa-brands fa-linkedin"></a>
+                    <a href="https://discord.com/invite/YC4H9XVkdc" class="icons fa-brands fa-discord"></a>
+                    <a href="https://github.com/bmays4067" class="icons fa-brands fa-github"></a>
+					<a href="https://hub.docker.com/u/bmays4067" class="icons fa-brands fa-docker"></a>
+                    <a href="mailto:will@pearman.dev" class="icons fa-solid fa-paper-plane"></a>
+                </div>
+            </div>
+        </section>
+        <section>
+        <div class="bg" style="background-image: url(https://talentedu.com/sbs/wp-content/uploads/sites/22/2021/07/Mountbatten-and-Zepler.jpg); "></div>
+        <div>
+            <h1 class="title" >Skillset</h1>
+            <img src="https://i.imgflip.com/6htyei.jpg">
+        </div>
+        </section>
+        <section>
+        <div class="bg" style="background-image: url(https://s3.amazonaws.com/cdn.echo-64.com/wp-content/uploads/2017/06/02223255/time.jpg); "></div>
+        <div>
+            <h1 class="title" >Experience</h1>
+            <img src="https://i.imgflip.com/6htyjf.jpg">
+        </div>
+        </section>
+        <section>
+        <div class="bg" style="background-color: #0097C5; "></div>
+        <div>
+            <h1 class="title" >What is this place?</h1>
+            <p>It <b>actually</b> is my portfolio, but it also has another side to it;
+                <br><b>This website <strike>is</strike> will be exploitable by design.</b>
+                <br><i>There is currently nothing to exploit.</i>
+                <br>
+                <br>My plan is to create more exploits to turn this portfolio into a place of practise.<br>I will most likely use it in some upcoming SUCSS sessions.
+            </p>        
+        </div>
+        </section>
+    </body>
+    <script>
+        gsap.utils.toArray("section").forEach((section, i) => {
+            section.bg = section.querySelector(".bg"); 
+
+            // Give the backgrounds some random images
+            //section.bg.style.backgroundImage = `url(https://picsum.photos/${innerWidth}/${innerHeight}?random=${i})`;
+
+            // Do the parallax effect on each section
+            if (i) {
+                section.bg.style.backgroundPosition = `50% ${-innerHeight / 2}px`;
+
+                gsap.to(section.bg, {
+                backgroundPosition: `50% ${innerHeight / 2}px`,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: section,
+                    scrub: true
+                }
+                });
+            } 
+            
+            // the first image should be positioned against the top. Use px on the animating part to work with GSAP. 
+            else {
+                section.bg.style.backgroundPosition = "50% 0px"; 
+
+                gsap.to(section.bg, {
+                backgroundPosition: `50% ${innerHeight / 2}px`,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top top", 
+                    end: "bottom top",
+                    scrub: true
+                }
+                });
+            }
+        });
+    </script>
+</html>

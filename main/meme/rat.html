@@ -1,0 +1,62 @@
+ <html>
+	<head>
+		<title>pearman.dev | recursively defined rats</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+		
+			body {
+				background-image: url("https://c.tenor.com/aaEMtGfZFbkAAAAC/rat-spinning.gif");
+				background-position: center;
+				background-attachment: fixed;
+				animation: rats 30s infinite;
+				margin: 0;
+			}
+			
+			@keyframes rats {
+				0% {background-size: 10000%}
+				5% {background-size: 50%}
+				100% {background-size: 0.24%};
+			}
+			
+			h1 {
+				text-align: center;
+				font-size: 4em;
+				font-family: 'PT Sans', sans-serif;
+				background-color: white;
+				padding: 1%;
+				style="display:inline"
+			}
+			
+			button {
+				border-radius: 20%;
+				transition-duration: 0.4s;
+				style="display:inline"
+			}
+			
+			button:hover {
+				background-color: #FF0000;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>recursively defined rats</h1>
+		
+		<audio src="https://incompetech.com/music/royalty-free/mp3-royaltyfree/Black%20Vortex.mp3" autoplay loop/>
+		<!--"Black Vortex" Kevin MacLeod (incompetech.com)
+		Licensed under Creative Commons: By Attribution 4.0 License
+		http://creativecommons.org/licenses/by/4.0/-->
+	</body>
+	
+	<script>
+		function toggleAudio() {
+			const audio = document.querySelector("audio");
+			audio.volume = 1;
+			audio.play();
+		};
+
+		document.addEventListener('click', function onClick(event) {
+			toggleAudio();
+		});
+	</script>
+</html>
